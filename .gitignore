@@ -1,0 +1,54 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# === Virtual Environments ===
+venv/
+env/
+ENV/
+.venv/
+
+# === Django Stuff ===
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/  # only if you're using collectstatic to generate static assets
+local_settings.py
+instance/
+.settings/
+
+# === VS Code ===
+.vscode/
+
+# === macOS ===
+.DS_Store
+
+# === Windows ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === MySQL Dumps ===
+*.sql
+
+# === dotenv ===
+.env
+.env.*
+
+# === Coverage reports ===
+htmlcov/
+.coverage
+.coverage.*
+
+# === Migrations (Optional if you want to exclude generated migrations) ===
+# Uncomment below if you want to ignore migrations
+# */migrations/
+# */migrations/*.py
+# */migrations/*.pyc
