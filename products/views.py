@@ -58,7 +58,7 @@ class ProductListView(APIView):
     def get(self, request):
         category_slug = request.GET.get('category')
         sort_by = request.GET.get('sort')
-        search = request.GET.get('search')  # 👈 Add this line
+        search = request.GET.get('search')  
 
         products = Product.objects.all()
 
@@ -79,7 +79,6 @@ class ProductListView(APIView):
         elif sort_by == "name_desc":
             products = products.order_by("-name")
 
-        # ✅ Paginate manually
         paginator = ProductPagination()
         paginated_products = paginator.paginate_queryset(products, request)
         serializer = ProductSerializer(paginated_products, many=True, context={"request": request})

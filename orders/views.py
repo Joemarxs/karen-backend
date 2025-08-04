@@ -147,7 +147,7 @@ class MpesaCallbackView(APIView):
 
     def post(self, request):
         try:
-            logger.info("📦 Received M-Pesa callback: %s", request.data)  # 📍 Added log
+            logger.info("📦 Received M-Pesa callback: %s", request.data)  # Added log
 
             stk_callback = request.data.get("Body", {}).get("stkCallback", {})
             if not stk_callback:

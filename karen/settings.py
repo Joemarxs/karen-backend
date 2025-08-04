@@ -47,7 +47,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '4ac2-197-248-59-241.ngrok-free.app'  # ✅ Add your ngrok subdomain here
+    '4ac2-197-248-59-241.ngrok-free.app'  
 ]
 
 
@@ -130,7 +130,7 @@ DATABASES = {
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
-        'PORT': '4000',
+        'PORT': config('DB_PORT'),
         'OPTIONS': {
             'ssl': {
                 'ca': config('DB_SSL_CA_PATH')
@@ -192,5 +192,4 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': config('CLOUDINARY_API_SECRET'),
 }
 
-MEDIA_URL = f'https://res.cloudinary.com/{config("CLOUDINARY_CLOUD_NAME")}/media/'
 
