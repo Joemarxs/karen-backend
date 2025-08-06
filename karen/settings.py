@@ -49,8 +49,9 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'karen.onrender.com'
+    'karen-backend-jwmt.onrender.com'
 ]
+
 
 
 
